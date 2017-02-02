@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import DebouncedInput from './DebouncedInput';
+
+function handleChange(text) {
+  console.log(text);
+}
 
 ReactDOM.render(
-  <App />,
+  <DebouncedInput debounceTime={ 200 } handleChange={ handleChange }/>,
   document.getElementById('root')
 );
